@@ -1,0 +1,31 @@
+<h1>Listing humen</h1>
+
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Sex</th>
+    <th>Height</th>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @humen.each do |human| %>
+  <tr>
+    <td><%= human.firstName %></td>
+    <td><%= human.lastName %></td>
+    <td><%= human.sex %></td>
+    <td><%= human.height %></td>
+    <td><%= human.content %></td>
+    <td><%= link_to 'Show', human %></td>
+    <td><%= link_to 'Edit', edit_human_path(human) %></td>
+    <td><%= link_to 'Destroy', human, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Human', new_human_path %>

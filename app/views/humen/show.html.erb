@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Firstname:</b>
+  <%= @human.firstName %>
+</p>
+
+<p>
+  <b>Lastname:</b>
+  <%= @human.lastName %>
+</p>
+
+<p>
+  <b>Sex:</b>
+  <%= @human.sex %>
+</p>
+
+<p>
+  <b>Height:</b>
+  <%= @human.height %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @human.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_human_path(@human) %> |
+<%= link_to 'Back', humen_path %>
